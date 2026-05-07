@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+
+        // Scanner is used to read user input from the console. It provides various methods to read different types of data, such as nextInt() for integers, nextLine() for strings, etc.
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the first number:");
         int num1 = scanner.nextInt();
@@ -63,5 +65,31 @@ public class App {
         System.out.println("Copy of the array: " + Arrays.toString(copyOfNumbers));
 
         System.out.println("Are the two arrays equal? " + Arrays.equals(numbers, copyOfNumbers)); // Checks if the two arrays are equal, == won't work because it checks for reference equality, not content equality
+
+
+        
+        for(int number = 1; number <= 10; number++) {
+            for (int multiplier = 1; multiplier <= 10; multiplier++) {
+                System.out.printf("%d x %d = %d \n", number, multiplier, number * multiplier);
+            }
+            System.out.println(); // Print a new line after each table
+        }
+
+
+        int number = 5;
+        int multiplier = 1;
+
+        while (multiplier <= 10) {
+            System.out.printf("%d x %d = %d \n", number, multiplier, number * multiplier);
+            multiplier++;
+        }
+
+        int number2 = 5;
+        int multiplier2 = 1;
+        do {
+            System.out.printf("%d x %d = %d \n", number2, multiplier2, number2 * multiplier2);
+            multiplier2++;
+        } while (multiplier2 <= 10);
+
     }
 }
