@@ -159,8 +159,9 @@ public class App {
         System.out.println(studentGrades.getOrDefault("Eve", 0)); // Returns the value associated with the specified key, or the default value if the key is not present, in this case it will return 0 because "Eve" is not a key in the map
 
         studentGrades.forEach((student, grade) -> {
-            studentGrades.replace(student, grade + 5); // This will add 5 points to each student's grade, forEach is a method that takes a lambda expression and applies it to each key-value pair in the map
-            System.out.println(student + ": " + grade); // This will print each student and their grade, forEach is a method that takes a lambda expression and applies it to each key-value pair in the map
+            studentGrades.replace(student, grade + 100); // This will add 5 points to each student's grade, forEach is a method that takes a lambda expression and applies it to each key-value pair in the map
         });
+
+        System.out.println("Student grades after adding points: " + studentGrades);
     }
 }
